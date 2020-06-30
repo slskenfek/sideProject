@@ -1,14 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-
 <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../static/css/header.css"> 
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
-	<header>오우어우어워nb</header>
+	<header class="header">Style</header>
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'London')">메뉴1</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris')">메뉴2</button>
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')">메뉴3</button>
+</div>
+
+<div id="London" class="tabcontent">
+  <h3>메뉴1</h3>
+</div>
+
+<div id="Paris" class="tabcontent">
+  <h3>메뉴2</h3>
+</div>
+
+<div id="Tokyo" class="tabcontent">
+  <h3>메뉴3</h3>
+</div>
+	<script>
+		function openCity(evt, cityName) {
+			var i, tabcontent, tablinks;
+			tabcontent = document.getElementsByClassName("tabcontent");
+			for (i = 0; i < tabcontent.length; i++) {
+				tabcontent[i].style.display = "none";
+			}
+			tablinks = document.getElementsByClassName("tablinks");
+			for (i = 0; i < tablinks.length; i++) {
+				tablinks[i].className = tablinks[i].className.replace(
+						" active", "");
+			}
+			document.getElementById(cityName).style.display = "block";
+			evt.currentTarget.className += " active";
+		}
+	</script>
 </body>
 </html>
