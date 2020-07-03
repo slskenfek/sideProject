@@ -1,10 +1,10 @@
-package com.test.boot;
+package com.shpping.main.boot;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class MemberController {
+public class MainController {
 
 	@GetMapping("main")
 	public String main() {
