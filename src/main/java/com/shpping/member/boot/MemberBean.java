@@ -10,12 +10,14 @@ import javax.persistence.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
 @Entity
+@EqualsAndHashCode(of="uid")
 public class MemberBean {
 
 	@Id
@@ -40,6 +42,7 @@ public class MemberBean {
 	@OneToMany(cascade=CascadeType.ALL, fetch=FetchType.EAGER)
 	@JoinColumn(name="uid")
 	private List<User> roles;
+
 	
 	
 }
