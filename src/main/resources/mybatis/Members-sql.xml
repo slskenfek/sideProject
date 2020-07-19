@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.test.boot.MemberMapper">
+<mapper namespace="com.shpping.member.boot.MemberMapper">
+	<insert id="MemberInsert">
+		INSERT INTO members(
+		member_seq,
+		member_id,
+		member_pass,
+		member_nicname,
+		phone_num
+		)
+		values(
+		#{memberSeq},
+		#{memberId},
+		#{memberPass},
+		#{memberNicname},
+		#{phoneNum}
+		)
+	</insert>
+
 
 </mapper>
