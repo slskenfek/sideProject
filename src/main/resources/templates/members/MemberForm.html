@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>회원가입</title>
+</head>
+<body>
+	<div th:include="header.html"></div>
+	<form action="">
+		<input type="hidden" name="MODE" id="MODE" value="">
+		<div>
+
+
+			<button id="Memberjoinbtn" name="Memberjoinbtn">가입</button>
+		</div>
+	</form>
+
+	<script type="text/javascript">
+		$("#Memberjoinbtn").click(function(){
+			$.Ajax({
+			url: 'api/insert'
+				
+			})
+			
+		
+		})
+	</script>
+</body>
+</html>

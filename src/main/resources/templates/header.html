@@ -1,32 +1,37 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="../static/css/header.css"> 
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
-	<header class="header">Style</header>
 		<div class="loginForm">
-		<button type="button" onclick="location.href='loginForm'">Login</button>	
+		<button type="button" onclick="moveing('loginForm')">Login</button>	
+		<button type="button" onclick="moveing('memberForm')">회원가입</button>
+		<button type="button"  id="shppingS" name="shppingS" class="glyphicon glyphicon-briefcase shppingS" ></button>
 		</div>
+	
+	<header class="header">Style</header>
+		
 <div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'London')">메뉴1</button>
-  <button class="tablinks" onclick="openCity(event, 'Paris')">메뉴2</button>
-  <button class="tablinks" onclick="openCity(event, 'Tokyo')">메뉴3</button>
+  <button class="tablinks" onmouseover="openCity(event, 'London')">의류</button>
+  <button class="tablinks" onmouseover="openCity(event, 'Paris')">벨트</button>
+  <button class="tablinks" onmouseover="openCity(event, 'Tokyo')">신발</button>
 </div>
 
 <div id="London" class="tabcontent">
   <h3>메뉴1</h3>
 </div>
-
 <div id="Paris" class="tabcontent">
   <h3>메뉴2</h3>
 </div>
-
 <div id="Tokyo" class="tabcontent">
   <h3>메뉴3</h3>
 </div>
@@ -43,9 +48,9 @@
 			}
 			document.getElementById(cityName).style.display = "block";
 			evt.currentTarget.className += " active";
-		
-		
-		
+		}
+		function moveing(obj){
+		location.href = obj
 		}
 	</script>
 </body>
